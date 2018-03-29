@@ -48,13 +48,43 @@ diaReferencia = dataReferencia % 100;
 printf("\n\ndata referencia = %d", dataReferencia);
 printf("\ndata desejada = %d", dataDesejada);
 
-if(1>0){//verifica o ano, Quando o ano é igual
-   if( mesReferencia < mesDesejado ){
-
-        if(mesReferencia >= 1){
-
-        }
-   }
+if(){
+    if(mesReferencia >= 1){
+        31
+    }
+    if(mesReferencia >= 2){ 
+        28 ou 29
+    }
+    if(mesReferencia >= 3){ 
+        31
+    }
+    if(mesReferencia >= 4){ 
+        30
+    }
+    if(mesReferencia >= 5){ 
+        31
+    }
+    if(mesReferencia >= 6){ 
+        30
+    }
+    if(mesReferencia >= 7){ 
+        31
+    }
+    if(mesReferencia >= 8){ 
+        31
+    }
+    if(mesReferencia >= 9){
+        30
+    }
+    if(mesReferencia >= 10){ 
+        31
+    }
+    if(mesReferencia >= 11){ 
+        30
+    }
+    if(mesReferencia >= 12){ 
+        31
+    }
 }
 
 /*
