@@ -4,7 +4,7 @@ int main(){
 
 int dataDesejada = 20160925;
 int anoBissexto = 2016;
-int dataReferencia = 20160928;
+int dataReferencia = 20160930;
 int diaSemanaReferencia = 2;
 int saida, diaSemana, somaDias, invertido, aux;
 int anoDesejado = (dataDesejada / 10000);
@@ -13,8 +13,15 @@ int diaDesejado = dataDesejada % 100;
 int anoReferencia = dataReferencia / 10000;
 int mesReferencia = (dataReferencia / 100) %10;
 int diaReferencia = dataReferencia % 100;
+int dr = 1, dd = 12;
+int dias = 0;
+int ocorre, exclui;
+
 printf("\ndata referencia = %d", dataReferencia);
 printf("\ndata desejada = %d", dataDesejada);
+
+int UltimoDiaDoMes(int m, int a, int b);
+int AnoBissexto(int a, int r);
 
 //Verificar qual data é a menor e colocar como a dataReferencia
 if(anoDesejado < anoReferencia){
@@ -47,79 +54,52 @@ diaReferencia = dataReferencia % 100;
 
 printf("\n\ndata referencia = %d", dataReferencia);
 printf("\ndata desejada = %d", dataDesejada);
+printf("\n%d\n\n", (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia));
 
-if(){
-    if(mesReferencia >= 1){
-        31
+while(dataReferencia <= dataDesejada){
+    anoReferencia = dataReferencia / 10000;
+    mesReferencia = (dataReferencia / 100) %10;
+    diaReferencia = dataReferencia % 100;
+
+    printf("\n%d",diaReferencia);
+
+    diaReferencia++;
+    dias++;
+
+    if( UltimoDiaDoMes(diaReferencia, mesReferencia, anoBissexto) = diaReferencia){
+        if(mesReferencia = 12){
+            mesReferencia = 01;
+            anoReferencia++;
+        }
+        else if(mesReferencia != 12)
+            mesReferencia = mesReferencia + 1;
+        else
+            diaReferencia = 01;
     }
-    if(mesReferencia >= 2){ 
-        28 ou 29
-    }
-    if(mesReferencia >= 3){ 
-        31
-    }
-    if(mesReferencia >= 4){ 
-        30
-    }
-    if(mesReferencia >= 5){ 
-        31
-    }
-    if(mesReferencia >= 6){ 
-        30
-    }
-    if(mesReferencia >= 7){ 
-        31
-    }
-    if(mesReferencia >= 8){ 
-        31
-    }
-    if(mesReferencia >= 9){
-        30
-    }
-    if(mesReferencia >= 10){ 
-        31
-    }
-    if(mesReferencia >= 11){ 
-        30
-    }
-    if(mesReferencia >= 12){ 
-        31
+    else if( UltimoDiaDoMes(diaReferencia, mesReferencia, anoReferencia) = diaReferencia )
+        diaReferencia = diaReferencia + 1;
+    else
+        dias = dias + 1;
+
+    dataReferencia = (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia);
+}
+
+int UltimoDiaDoMes(int m, int a, int b){
+    if( m == 2){
+        if( AnoBissexto(a, b))
+            return 29;
+        else
+            return 28;
     }
 }
 
-/*
-switch ( diaSemana ){
-     case 0 :
-       printf ("Segunda feira\n");
-     break;
+int AnoBissexto(int a, int r){
+    ocorre = ( (a - r) % 4 ) = 0;
+    exclui =
+}
 
-     case 1 :
-       printf ("Terca feira\n");
-     break;
-
-     case 2 :
-        printf ("Quarta feira\n");
-     break;
-
-     case 3 :
-        printf ("Quinta feira\n");
-     break;
-
-     case 4 :
-        printf ("Sexta feira\n");
-     break;
-
-     case 5 :
-        printf ("Sabado\n");
-     break;
-
-     case 6 :
-        printf ("Domingo\n");
-     break;
-
-     default :
-       printf ("Valor invalido!\n");
-} */
+printf("\n\n%d\n\n",dias);
+printf("\n\ndata referencia final = %d\n\n", dataReferencia);
 
 return 0;
 }
