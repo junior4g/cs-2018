@@ -1,5 +1,9 @@
 #include<stdio.h>
 
+typedef int bool;
+#define TRUE 1
+#define FALSE 0
+
 int main(){
 
 int dataDesejada = 20160925;
@@ -95,7 +99,9 @@ int UltimoDiaDoMes(int m, int a, int b){
 
 int AnoBissexto(int a, int r){
     ocorre = ( (a - r) % 4 ) = 0;
-    exclui =
+    exclui = ( ((a % 100) = 0) && ((a % 400) = 0) ) != 0;
+
+    return a =
 }
 
 printf("\n\n%d\n\n",dias);
