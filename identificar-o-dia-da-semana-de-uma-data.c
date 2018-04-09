@@ -1,111 +1,92 @@
 #include<stdio.h>
 
-typedef int bool;
-#define TRUE 1
-#define FALSE 0
-
 int main(){
 
-int dataDesejada = 20160925;
+int dataReferencia = 20200101;
+int dataDesejada = 20201231;
 int anoBissexto = 2016;
-int dataReferencia = 20160930;
-int diaSemanaReferencia = 2;
+int diaSemanaReferencia = 2, cont = 1;
 int saida, diaSemana, somaDias, invertido, aux;
 int anoDesejado = (dataDesejada / 10000);
-int mesDesejado = ((dataDesejada / 100) % 10);
+int mesDesejado = ((dataDesejada / 100) % 100);
 int diaDesejado = dataDesejada % 100;
 int anoReferencia = dataReferencia / 10000;
-int mesReferencia = (dataReferencia / 100) %10;
+int mesReferencia = (dataReferencia / 100) % 100;
 int diaReferencia = dataReferencia % 100;
-int dr = 1, dd = 12;
-int dias = 0;
-int ocorre, exclui;
-
 printf("\ndata referencia = %d", dataReferencia);
 printf("\ndata desejada = %d", dataDesejada);
 
-int UltimoDiaDoMes(int m, int a, int b);
-int AnoBissexto(int a, int r);
-
-//Verificar qual data é a menor e colocar como a dataReferencia
-if(anoDesejado < anoReferencia){
-    aux = dataDesejada;
-    dataDesejada = dataReferencia;
-    dataReferencia = aux;
-}
-if(anoDesejado = anoReferencia){
-    if(mesDesejado < mesReferencia){
-        aux = dataDesejada;
-        dataDesejada = dataReferencia;
-        dataReferencia = aux;
-    }
-}
-if(anoDesejado = anoReferencia){
-    if(mesDesejado = mesReferencia){
-        if(diaDesejado < diaReferencia){
-            aux = dataDesejada;
-            dataDesejada = dataReferencia;
-            dataReferencia = aux;
-        }
-    }
-}
-anoDesejado = (dataDesejada / 10000);
-mesDesejado = ((dataDesejada / 100) % 10);
-diaDesejado = dataDesejada % 100;
-anoReferencia = dataReferencia / 10000;
-mesReferencia = (dataReferencia / 100) %10;
-diaReferencia = dataReferencia % 100;
-
 printf("\n\ndata referencia = %d", dataReferencia);
-printf("\ndata desejada = %d", dataDesejada);
-printf("\n%d\n\n", (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia));
+printf("\ndata desejada = %d\n\n", dataDesejada);
+printf("\nAno de referencia = %d", anoReferencia);
+printf("\nMes de referencia = %d", mesReferencia);
+printf("\nDia de referencia = %d", diaReferencia);
 
-while(dataReferencia <= dataDesejada){
-    anoReferencia = dataReferencia / 10000;
-    mesReferencia = (dataReferencia / 100) %10;
-    diaReferencia = dataReferencia % 100;
+dataReferencia = (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia);
+printf("\n\ndata referencia = %d", dataReferencia);
 
-    printf("\n%d",diaReferencia);
-
-    diaReferencia++;
-    dias++;
-
-    if( UltimoDiaDoMes(diaReferencia, mesReferencia, anoBissexto) = diaReferencia){
-        if(mesReferencia = 12){
-            mesReferencia = 01;
-            anoReferencia++;
-        }
-        else if(mesReferencia != 12)
-            mesReferencia = mesReferencia + 1;
-        else
-            diaReferencia = 01;
-    }
-    else if( UltimoDiaDoMes(diaReferencia, mesReferencia, anoReferencia) = diaReferencia )
-        diaReferencia = diaReferencia + 1;
-    else
-        dias = dias + 1;
-
-    dataReferencia = (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia);
+while( dataReferencia < dataDesejada ){
+	anoDesejado = (dataDesejada / 10000);
+	mesDesejado = ((dataDesejada / 100) % 100);
+	diaDesejado = dataDesejada % 100;
+	anoReferencia = dataReferencia / 10000;
+	mesReferencia = (dataReferencia / 100) %100;
+	diaReferencia = dataReferencia % 100;
+	
+	if( mesReferencia == 2 ){//Tratamento para o mês de fevereiro
+		if( diaReferencia == 29){
+			diaReferencia = 01;
+			mesReferencia = 03;
+		}
+		else if( diaReferencia == 28 ){//Verificação dos anos bissextos
+			if (anoReferencia % 4 == 0 && (anoReferencia % 400 == 0 || anoReferencia % 100 != 0)) {
+    			diaReferencia = diaReferencia + 1;
+			}
+			else{
+				diaReferencia = 01;
+				mesReferencia = 03;
+			}
+		}
+		else{
+			diaReferencia = diaReferencia + 1;
+		}
+	}
+	//meses que são de 30 dias
+	else if( mesReferencia == 4 || mesReferencia == 6 || mesReferencia == 9 || mesReferencia == 11 ){
+		if( diaReferencia == 30 ){
+			diaReferencia = 01;
+			mesReferencia = mesReferencia + 1;
+		}
+		else{
+			diaReferencia = diaReferencia + 1;
+		}	
+	}
+	else if( mesReferencia == 12 ){//quando for dezembro
+		if( diaReferencia == 31 ){
+			diaReferencia = 01;
+			mesReferencia = 01;
+			anoReferencia = anoReferencia + 1;
+		}
+		else{
+			diaReferencia = diaReferencia + 1;
+		}
+	}
+	else if( diaReferencia == 31 ){//quando for o final do mes
+			mesReferencia = mesReferencia + 1;
+			diaReferencia = 01;
+	}
+	else{
+		diaReferencia = diaReferencia + 1;
+	}
+	dataReferencia = (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia);
+	printf("\ndata referencia = %d", dataReferencia);
+	cont++;
 }
+printf("\n\n%d",cont);
 
-int UltimoDiaDoMes(int m, int a, int b){
-    if( m == 2){
-        if( AnoBissexto(a, b))
-            return 29;
-        else
-            return 28;
-    }
+if (anoReferencia % 4 == 0 && (anoReferencia % 400 == 0 || anoReferencia % 100 != 0)) {
+	printf("\n\nE bissexto");
 }
-
-int AnoBissexto(int a, int r){
-    ocorre = ( (a - r) % 4 ) = 0;
-    exclui = ( ((a % 100) = 0) && ((a % 400) = 0) ) != 0;
-
-    return a =
-}
-
-printf("\n\n%d\n\n",dias);
-printf("\n\ndata referencia final = %d\n\n", dataReferencia);
 
 return 0;
 }
