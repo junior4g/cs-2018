@@ -1,0 +1,9 @@
+Comandos para node js no linux
+Navega até a pasta, cd e ls
+verifica se o node js esta instalado
+
+Pra inserir os valores
+digita node app 20180411 2016 20180411 4
+
+Pra ver o resultado
+digita echo $?
