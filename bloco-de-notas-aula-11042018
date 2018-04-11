@@ -7,3 +7,9 @@ digita node app 20180411 2016 20180411 4
 
 Pra ver o resultado
 digita echo $?
+
+Realizar os testes
+instalar o qunit
+npm install -g qunit
+Executar o teste
+Digita qunit
