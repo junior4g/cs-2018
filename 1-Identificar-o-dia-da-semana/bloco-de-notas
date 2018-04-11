@@ -1,0 +1,36 @@
+1 ano 365
+1 ano bissexto 366 
+(de 4 em 4 anos, exceto anos multiplos de 100 que não são multiplos de 400)
+
+1	Janeiro		tem 31 dias
+2	Fevereiro	tem 28 dias (29 dias nos anos bissextos)
+3	Março		tem 31 dias
+4	Abril		tem 30 dias
+5	Maio		tem 31 dias
+6	Junho		tem 30 dias
+7	Julho		tem 31 dias
+8	Agosto		tem 31 dias
+9	Setembro	tem 30 dias
+10	Outubro		tem 31 dias
+11	Novembro	tem 30 dias
+12	Dezembro	tem 31 dias
+
+0 segunda feira
+1 terça feira
+2 quarta feira
+3 quinta feira
+4 sexta feira
+5 sábado
+6 domingo
+
+28 03 2018 - 2 quarta feira
+15 04 2018 - ?
+
+contador 18 dias
+
+Resultado
+15 04 2018 - 6 domingo
+
+
+
+Inverter as datas para a contagem avançar
