@@ -29,7 +29,7 @@ dataReferencia = (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia);
 printf("\n\ndata referencia = %d", dataReferencia);//teste
 
 //R7 Se não receber os 4 argumentos
-if(dataReferencia == -1 || dataDesejada == -1 || anoBissexto == -1 || diaSemanaReferecnia == -1){
+if(dataReferencia == -1 || dataDesejada == -1 || anoBissexto == -1 || diaSemanaReferencia == -1){
 	condicao = -1;
 }
 
@@ -58,16 +58,21 @@ if(dataReferencia < 0 || dataDesejada < 0 || anoBissexto < 0 || diaSemanaReferec
 if( diaSemanaReferencia > 6 ){
 	condicao = -1;
 }
-//R11 Verifica se o ano bissexto émenor que 1
+//R11 Verifica se o ano bissexto é menor que 1
 if( anoBissexto < 1 ){ 
 	condicao = -1;
 }
 //R12 A Verifica se a data não possui 8 digitos
-if(){
+int contaDigitos = 0;
+while ( dataReferencia != 0){
+    	contaDigitos = contaDigitos + 1;
+        dataReferencia = dataReferencia / 10;//enquanto dividir por 10 ele incrementa o contador
+}
+if( contaDigitos < 8 || contaDigitos > 8 ){
 	condicao = -1;
 }
-//R12 B Verifica se o primeiro digito da data é zero
-if(){
+//R12 B Verifica se o primeiro digito da data é zero 0aaammdd
+if( anoReferencia / 1000) % 10 == 0 ){
 	condicao = -1;
 }
 //R12 C verifica se o mês é zero ou maior que 12
@@ -92,7 +97,7 @@ if (anoReferencia % 4 == 0 && (anoReferencia % 400 == 0 || anoReferencia % 100 !
 	}
 }
 else if( mesReferencia == 2 ){
-	if( diaReferencia > 29 ){
+	if( diaReferencia > 28 ){
 		condicao = -1;
 	}
 }
