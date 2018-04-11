@@ -6,24 +6,13 @@ int dataReferencia = -1;
 int dataDesejada = -1;
 int anoBissexto = -1;
 int diaSemanaReferencia = -1;
- 
 int diaSemanaDesejado = 0;
 
-//teste
-/*printf("\nInforme a data de referencia:");
-scanf("%d",&dataReferencia);
-printf("\nInforme a data desejada:");
-scanf("%d",&dataDesejada);
-printf("\nInforme um ano bissexto:");
-scanf("%d",&anoBissexto);
-printf("\nInforme o dia da semana de referencia:");
-scanf("%d",&diaSemanaReferencia);*/
-
-//teste
-dataReferencia = 20180401;
-dataDesejada = 20180416;
+//Preenchimento automatico dos dados
+dataReferencia = 20180405;
+dataDesejada = 20180415;
 anoBissexto = 2;
-diaSemanaReferencia = 6;
+diaSemanaReferencia = 3;
 
 int cont = 1;
 int saida, diaSemana, somaDias, invertido, aux;
@@ -34,18 +23,8 @@ int anoReferencia = dataReferencia / 10000;
 int mesReferencia = (dataReferencia / 100) % 100;
 int diaReferencia = dataReferencia % 100;
 int condicao = 1;
-//teste
-//printf("\ndata referencia = %d", dataReferencia);//teste
-//printf("\ndata desejada = %d", dataDesejada);//teste
-printf("\ndata referencia = %d", dataReferencia);
-printf("\ndata desejada = %d", dataDesejada);
-printf("\nAno de referencia = %d", anoReferencia);
-printf("\nMes de referencia = %d", mesReferencia);
-printf("\nDia de referencia = %d", diaReferencia);
-printf("\n\n#################Programa#################");
 
 dataReferencia = (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia);
-//printf("\n\ndata referencia = %d", dataReferencia);//teste
 
 //R7 Se não receber os 4 argumentos
 if(dataReferencia == -1 || dataDesejada == -1 || anoBissexto == -1 || diaSemanaReferencia == -1){
@@ -53,7 +32,6 @@ if(dataReferencia == -1 || dataDesejada == -1 || anoBissexto == -1 || diaSemanaR
 }
 
 //R8 verifica se o numero é inteiro
-//int aux;
 aux = dataReferencia;
 if (aux != dataReferencia){ //Se for diferente é porque não é inteiro
     condicao = -1;
@@ -178,49 +156,31 @@ if( condicao == 1 ){
 			diaReferencia = diaReferencia + 1;
 		}
 		dataReferencia = (anoReferencia*10000) + (mesReferencia*100) + (diaReferencia);
-		printf("\ndata referencia = %d", dataReferencia);//teste
 		cont++;
 	}
 	
 	if( (diaSemanaReferencia + ( cont % 7 ) ) <= 6 ){
 		aux = (diaSemanaReferencia + ( cont % 7 ) ) -1;
-		printf("\nDia da semana referencia = %d", diaSemanaReferencia);
-		printf("\nDia da semana desejado = %d", aux);
+		printf("%d", aux);
 	}
 	if( (diaSemanaReferencia + ( cont % 7 ) ) > 6 ){
-		//int i;
 		
 		int aux2 = cont % 7, x, cont2 = diaSemanaReferencia;
 		for(x = 0; x<aux2 ; x++){
 			if(cont2 == 7)
 				cont2 = 0;
-			printf("%d\n",cont2);
 			cont2++;
 		}
 
-		
-		printf("\nDia da semana referencia1 = %d", diaSemanaReferencia);
-		printf("\nDia da semana desejado = %d", cont2-1);
+		printf("%d", cont2-1);
 	}
 	
 	
 	
 }
 else{//algum erro nos dados recebidos retornando -1
-	printf("\nRetorna -1");//teste
+	printf("-1");//teste
 }
-
-//teste
-printf("\n\n##########################################");
-printf("\n\nDados para teste");
-if (anoReferencia % 4 == 0 && (anoReferencia % 400 == 0 || anoReferencia % 100 != 0)) {
-	printf("\nE bissexto");
-}
-printf("\nContador de dias %d",cont);
-printf("\ncondicao = %d", condicao);
-printf("\nPular dias da semana %d", cont % 7 );
-printf("\n%d", 9 % 7 );
-
 
 return 0;
 }
