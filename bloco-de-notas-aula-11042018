@@ -13,3 +13,7 @@ instalar o qunit
 npm install -g qunit
 Executar o teste
 Digita qunit
+
+Atividade supervisionada
+https://github.com/kyriosdata/js/tree/master/primeiro
+Criar um arquivo java script para cada um dos arquivos, ao todo são 10
