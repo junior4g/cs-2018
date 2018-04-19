@@ -10,4 +10,4 @@ function AlphabetSoup(str) {
   return sorted.join("");    
 }
    
-AlphabetSoup("coderbyte"); 
+AlphabetSoup("orlando"); 
