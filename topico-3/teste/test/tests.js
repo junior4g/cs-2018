@@ -14,7 +14,7 @@ function AlphabetSoup(str) {
   // ordena em ordem alfabetica
   var sorted = chars.sort();
   
-  console.log(sorted);
+  console.log(sorted.join);
 
   // retorna a string ordenada
   return sorted.join("");    
@@ -39,13 +39,13 @@ const operacao = require("../codigo");
 // Abaixo segue o nosso primeiro teste
 // identificado por "soma trivial".
 
-QUnit.test("soma trivial", function (assert) {
+QUnit.test("ordenacao de uma string", function (assert) {
 
   // Executa a operação que desejamos testar
-  let resultado = operacao.soma(3, -1);
+  let resultado = operacao.AlphabetSoup("orlando");
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 2, "soma incorreta");
+  assert.equal(resultado, "adlnoor", "ordenacao incorreta");
 });
 
 },{"../codigo":1}]},{},[2]);

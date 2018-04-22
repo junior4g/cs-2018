@@ -13,7 +13,7 @@ function AlphabetSoup(str) {
   // ordena em ordem alfabetica
   var sorted = chars.sort();
   
-  console.log(sorted);
+  console.log(sorted.join);
 
   // retorna a string ordenada
   return sorted.join("");    
