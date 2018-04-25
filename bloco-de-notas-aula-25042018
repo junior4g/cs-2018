@@ -1,0 +1,5 @@
+O método split () é usado para dividir uma string em uma matriz de substrings e retorna a nova matriz.
+
+O método sort () classifica os itens de uma matriz.
+
+O método join () une os elementos de uma matriz em uma string e retorna a string.
