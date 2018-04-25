@@ -2,8 +2,6 @@ function propriedade3025(n) {
     if( n>0 && n<= 9999){
         i = n / 100;
         j = n % 100;
-        console.log(parseInt(i));
-        console.log(j);
     }
     return (parseInt(i) + j) * (parseInt(i) + j) == n;
 }
