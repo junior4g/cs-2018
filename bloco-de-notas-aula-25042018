@@ -3,3 +3,7 @@ O método split () é usado para dividir uma string em uma matriz de substrings 
 O método sort () classifica os itens de uma matriz.
 
 O método join () une os elementos de uma matriz em uma string e retorna a string.
+
+
+npm install -g browserify
+browserify testa-codigo.js > tests.js
