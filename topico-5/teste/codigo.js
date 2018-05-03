@@ -1,5 +1,4 @@
 
-
 function diaDaSemana(d, m, a) {
 	condicao = 0;
 	
