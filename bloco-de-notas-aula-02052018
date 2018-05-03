@@ -1,0 +1,16 @@
+https://www.npmjs.com/settings/orlandojr/tokens
+----------------------
+npm install -g browserify
+----------------------
+https://github.com/babel/babelify
+
+# Babel 7
+$ npm install --save-dev babelify@next @babel/core
+
+# Babel 6
+$ npm install --save-dev babelify babel-core
+---------------------
+http://usejsdoc.org/
+
+Executando o Gerador de Documentação na Linha de Comandos
+jsdoc book.js
