@@ -1,4 +1,10 @@
-
+**
+ * Representa o calculo para encontrar o dia da semana.
+ * @constructor
+ * @param {int} d - O dia.
+ * @param {int} m - O mês.
+ * @param {int} a - O ano.
+ */
 function diaDaSemana(d, m, a) {
 	condicao = 0;
 	
