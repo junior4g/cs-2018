@@ -1,0 +1,11 @@
+{
+  "name": "dia-da-semana-alternativo",
+  "version": "1.0.0",
+  "scripts": {
+    "teste": "qunit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "qunit": "^2.5.0"
+  }
+}
