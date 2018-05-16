@@ -1,6 +1,5 @@
 
 const operacao = require("../codigo");
-//import Library from 'some-library'; Verificar alteração
 
 QUnit.test("dia da semana", function (assert) {
 
