@@ -1,4 +1,8 @@
 Eloquent - A versão 2 está disponível em português 
 http://braziljs.github.io/eloquente-javascript/
 
+Duplicidade de código
+npm install -g jsinspect
+jsinspect -I -L -t 20 --ignore "test"
+
 
