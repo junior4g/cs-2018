@@ -6,17 +6,14 @@
  * @param {number} y - Representa o divisor.
  * @param {number} s - Representa o resto da divisão inteira.
  */
-
-function restoDaDivisaoInteira(x,y) {
-	if( y >= 0 && x > 0 ){
-		s = x;  
-	}
-	
-	while( y <= s ){
-		s = s - y;
-	}
-	
-	return s;
+var s;
+function resto(x,y) {
+ if( y >= 0 && x > 0 ){
+  s = x;
+ }
+ while( y <= s ){
+  s = s - y;
+ }
+ return s;
 }
-
-console.log(restoDaDivisaoInteira(0,4));
+console.log(resto(0,4));
