@@ -7,13 +7,17 @@
  * @param {number} s - Representa o resto da divisão inteira.
  */
 var s;
+
 function resto(x,y) {
- if( y >= 0 && x > 0 ){
-  s = x;
- }
- while( y <= s ){
-  s = s - y;
- }
- return s;
+	if( y >= 0 && x > 0 ){
+		s = x;
+	}
+
+	while( y <= s ){
+		s = s - y;
+	}
+
+	return s;
 }
-console.log(resto(0,4));
+
+console.log(resto(5,3));
