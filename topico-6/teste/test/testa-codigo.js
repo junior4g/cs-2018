@@ -1,8 +1,4 @@
-
-
 const operacao = require("../codigo");
-
-
 
 QUnit.test("Resto da divisao inteira", function (assert) {
 

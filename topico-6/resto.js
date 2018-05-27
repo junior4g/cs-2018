@@ -8,7 +8,7 @@
  */
 var s;
 
-function resto(x,y) {
+function restoDaDivisaoInteira(x,y) {
 	if( y >= 0 && x > 0 ){
 		s = x;
 	}
@@ -20,4 +20,4 @@ function resto(x,y) {
 	return s;
 }
 
-console.log(resto(5,3));
+console.log(restoDaDivisaoInteira(5,3));
