@@ -3,6 +3,12 @@
  * Serão informados dois numeros.
  * @constructor
  * @param {number} a - Representa um numero fornecido ao programa
+ * @param {number} b - Representa um numero fornecido ao programa
+ * @param {number} parcela - Recebe o maior numero fornecido ao programa
+ * @param {number} totalParcelas - Recebe o menor numero fornecido ao programa
+ * @param {number} i - Representa um contador interno
+ * @param {number} s - Representa o resultado do calculo
+
  */
 
 function produto(a, b) {
