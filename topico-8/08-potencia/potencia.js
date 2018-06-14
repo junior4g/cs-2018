@@ -14,8 +14,9 @@
  */
 
 function produto(a, b) {
-	if( a >= 0 ) && ( b >= 0 ){
+	if(( a >= 0 ) && ( b >= 0 )){
 		totalParcelas = a;
+		parcela = b;
 	}
 	if( b < a ){
 		totalParcelas = b;
@@ -33,8 +34,9 @@ function produto(a, b) {
 }
  
 function potencia(x, y) {
-	if( x >= 0 ) && ( y >= 0 ){
+	if(( x >= 0 ) && ( y >= 0 )){
 		potencia = 1;
+		i = 1;
 	}
 	
 	while( y >= i ){
@@ -45,4 +47,4 @@ function potencia(x, y) {
 	return potencia;
 }
 
-console.log(potencia(2,3));
+console.log(potencia(2,4));

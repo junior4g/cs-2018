@@ -3,9 +3,28 @@ const operacao = require("../codigo");
 QUnit.test("Valor de PI", function (assert) {
 
   // Executa a operação que desejamos testar
-  let resultado = operacao.somaDosPrimeirosNaturais(00);
+  let resultado = operacao.logaritmo(2,2);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 00, "Correto!");
+  assert.equal(resultado, 5, "Correto!");
 });
+
+QUnit.test("Valor de PI", function (assert) {
+
+  // Executa a operação que desejamos testar
+  let resultado = operacao.logaritmo(3,2);
+
+  // Verifica se o resultado produzido é o esperado.
+  assert.equal(resultado, 8.5, "Correto!");
+});
+
+QUnit.test("Valor de PI", function (assert) {
+
+  // Executa a operação que desejamos testar
+  let resultado = operacao.logaritmo(4,2);
+
+  // Verifica se o resultado produzido é o esperado.
+  assert.equal(resultado, 13, "Correto!");
+});
+
 

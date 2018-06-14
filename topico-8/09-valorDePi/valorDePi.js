@@ -23,4 +23,4 @@ function valorDePi(n) {
 	}
 }
 
-console.log(valorDePi(5));
+console.log(valorDePi(2));

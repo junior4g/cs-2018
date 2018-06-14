@@ -21,4 +21,4 @@ function fatorial(n) {
 	return f;
 }
 
-console.log(fatorial(3));
+console.log(fatorial(4));

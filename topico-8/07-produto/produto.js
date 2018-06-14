@@ -8,12 +8,12 @@
  * @param {number} totalParcelas - Recebe o menor numero fornecido ao programa
  * @param {number} i - Representa um contador interno
  * @param {number} s - Representa o resultado do calculo
-
  */
 
 function produto(a, b) {
-	if( a >= 0 ) && ( b >= 0 ){
+	if(( a >= 0 ) && ( b >= 0 )){
 		totalParcelas = a;
+		parcela = b;
 	}
 	if( b < a ){
 		totalParcelas = b;
@@ -30,4 +30,4 @@ function produto(a, b) {
 	return s;
 }
 
-console.log(produto(2,3));
+console.log(produto(3,10));
