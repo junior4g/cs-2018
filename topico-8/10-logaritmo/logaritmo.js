@@ -24,7 +24,7 @@ function logaritmo(n, k) {
 		i = i + 1;
 	}
 	
-	return e
+	return e;
 }
 
 console.log(logaritmo(4,2));

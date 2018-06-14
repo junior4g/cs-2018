@@ -21,4 +21,4 @@ function quadrado(n) {
 	return n = s;
 }
 
-console.log(quadrado(4));
+exports.quadrado = quadrado;

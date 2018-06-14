@@ -25,4 +25,4 @@ function razao(x, y, k) {
 	return c / a;
 }
 
-console.log(razao(1,8,3));
+exports.razao = razao;
