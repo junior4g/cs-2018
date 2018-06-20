@@ -30,4 +30,4 @@ function fibonacci(n) {
 	return c;
 }
 
-console.log(fibonacci(35));
+exports.fibonacci = fibonacci;

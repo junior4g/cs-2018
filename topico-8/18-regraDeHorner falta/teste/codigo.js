@@ -20,4 +20,4 @@ function quadrado(n, i) {
 	return r;
 }
 
-console.log(quadrado(49, 5));
+exports.quadrado = quadrado;

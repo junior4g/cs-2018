@@ -20,4 +20,4 @@ function numeroPrimo(n) {
 	return "verdadeiro";
 }
 
-console.log(numeroPrimo(114));
+exports.numeroPrimo = numeroPrimo;
