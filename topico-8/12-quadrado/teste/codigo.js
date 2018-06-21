@@ -18,7 +18,7 @@ function quadrado(n) {
 		s = s + i;
 	}
 	
-	return n = s;
+	return ( n == s );
 }
 
 exports.quadrado = quadrado;

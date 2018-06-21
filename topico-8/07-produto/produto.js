@@ -10,8 +10,11 @@
  * @param {number} s - Representa o resultado do calculo
  */
 
+var x = 0;
+var y = 1;
+
 function produto(a, b) {
-	if(( a >= 0 ) && ( b >= 0 )){
+	if(( a >= x ) && ( b >= x )){
 		totalParcelas = a;
 		parcela = b;
 	}
@@ -19,15 +22,17 @@ function produto(a, b) {
 		totalParcelas = b;
 		parcela = a;
 	}
-	i = 1;
-	s = 0;
+	i = y;
+	s = x;
 	
 	while( totalParcelas >= i ){
 		s = s + parcela;
-		i = i + 1;
+		i = i + y;
 	}
 	
 	return s;
 }
 
-console.log(produto(3,10));
+var a = 3;
+var b = 10;
+console.log(produto(a,b));

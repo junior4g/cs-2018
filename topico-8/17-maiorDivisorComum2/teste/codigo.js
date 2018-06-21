@@ -20,4 +20,4 @@ function maiorDivisorComum(a, b) {
 	
 }
 
-exports.maiorDivisorComum = maiorDivisorComum;
+exports.maiorDivisorComum = maiorDivisorComum

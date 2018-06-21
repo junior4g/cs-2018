@@ -8,23 +8,28 @@
  * @param {number} denominador - Representa o denominador
  * @param {number} i - Representa uma variavel de controle
  */
+
+ var x = 1;
+ var y = 2;
  
 function logaritmo(n, k) {
-	if( (n >= 1) && (k >= 2) ){
-		i = 2;
-		e = 1 + n;
+	if( (n >= x) && (k >= y) ){
+		i = y;
+		e = x + n;
 		numerador = n;
-		denominador = 1;
+		denominador = x;
 	}
 	
 	while( k >= i ){
 		numerador = numerador * numerador;
 		denominador = denominador * i;
 		e = e + (numerador / denominador);
-		i = i + 1;
+		i = i + x;
 	}
 	
 	return e;
 }
 
-console.log(logaritmo(4,2));
+var a = 4;
+var b = 2;
+console.log(logaritmo(a,b));

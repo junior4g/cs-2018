@@ -3,59 +3,56 @@
  * Representa o calculo para encontrar o resto de uma divisão inteira.
  * Serão informados dois numeros.
  * @constructor
- * @param {number} x - Representa um valor repassado ao programa
- * @param {number} y - Representa um valor repassado ao programa
- * @param {number} k - Representa um valor repassado ao programa
+ * @param {number} n - Representa um valor repassado ao programa
+ * @param {number} s - Representa uma variavel de controle
  * @param {number} i - Representa uma variavel de controle
  */
  
-function razao(x, y, k) {
-	if( (x >= 0) && (x < y) && (k > 0) ){
-		c = y;
-		a = x;
+function quadrado(n) {
+	if( n >= 1 ){
 		i = 1;
+		s = 1;
 	}
 	
-	while( k >= i ){
-		t = c;
-		c = c + a;
-		a = t;
-		i = i + 1;
+	while( s < n ){
+		i = i + 2;
+		s = s + i;
 	}
 	
-	return c / a;
+	return ( n == s );
 }
 
-exports.razao = razao;
+exports.quadrado = quadrado;
 },{}],2:[function(require,module,exports){
 const operacao = require("../codigo");
 
 QUnit.test("Valor de PI", function (assert) {
 
   // Executa a operação que desejamos testar
-  let resultado = operacao.razao(1,3,4);
+  let resultado = operacao.quadrado(81);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 1.6363636363636365, "Correto!");
+  assert.equal(resultado, true, "Correto!");
 });
 
 QUnit.test("Valor de PI", function (assert) {
 
   // Executa a operação que desejamos testar
-  let resultado = operacao.razao(1,4,2);
+  let resultado = operacao.quadrado(79);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 1.8, "Correto!");
+  assert.equal(resultado, false, "Correto!");
 });
 
 QUnit.test("Valor de PI", function (assert) {
 
   // Executa a operação que desejamos testar
-  let resultado = operacao.razao(1,8,3);
+  let resultado = operacao.quadrado(4);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 1.5294117647058822, "Correto!");
+  assert.equal(resultado, true, "Correto!");
 });
+
 
 
 },{"../codigo":1}]},{},[2]);

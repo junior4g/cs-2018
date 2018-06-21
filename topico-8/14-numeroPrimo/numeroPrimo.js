@@ -4,20 +4,28 @@
  * @constructor
  * @param {number} n - Representa um valor repassado ao programa
  * @param {number} i - Representa uma variavel auxiliar
+ * @param {number} a - Representa uma variavel auxiliar
+ * @param {number} b - Representa uma variavel auxiliar
+ * @param {number} c - Representa uma variavel auxiliar
  */
  
+var a = 0;
+var b = 1;
+var c = 2;
+ 
 function numeroPrimo(n) {
-	if( n > 1 ){
-		i = 2;
+	if( n > b ){
+		i = c;
 	}
 	
 	while( n > i ){
-		if( ( n % i ) == 0 )
+		if( ( n % i ) == a )
 			return "falso";
-		i =  i + 1;
+		i =  i + b;
 	}
 	
 	return "verdadeiro";
 }
 
-console.log(numeroPrimo(114));
+var num1 = 113;
+console.log(numeroPrimo(num1));

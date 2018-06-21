@@ -7,18 +7,22 @@
  * @param {number} i - Representa uma variavel de controle
  */
  
+var a = 1;
+var b = 2;
+ 
 function quadrado(n) {
-	if( n >= 1 ){
-		i = 1;
-		s = 1;
+	if( n >= a ){
+		i = a;
+		s = a;
 	}
 	
 	while( s < n ){
-		i = i + 2;
+		i = i + b;
 		s = s + i;
 	}
 	
-	return n = s;
+	return (n == s);
 }
 
-console.log(quadrado(4));
+var num = 4;
+console.log(quadrado(num));

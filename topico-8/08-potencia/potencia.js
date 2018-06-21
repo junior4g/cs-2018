@@ -13,8 +13,11 @@
  * @param {number} s - Representa o resultado da função produto
  */
 
+var x = 0;
+var y = 1;
+ 
 function produto(a, b) {
-	if(( a >= 0 ) && ( b >= 0 )){
+	if(( a >= x ) && ( b >= x )){
 		totalParcelas = a;
 		parcela = b;
 	}
@@ -22,29 +25,31 @@ function produto(a, b) {
 		totalParcelas = b;
 		parcela = a;
 	}
-	i = 1;
-	s = 0;
+	i = y;
+	s = x;
 	
 	while( totalParcelas >= i ){
 		s = s + parcela;
-		i = i + 1;
+		i = i + y;
 	}
 	
 	return s;
 }
  
 function potencia(x, y) {
-	if(( x >= 0 ) && ( y >= 0 )){
-		potencia = 1;
-		i = 1;
+	if(( x >= x ) && ( y >= x )){
+		potencia = y;
+		i = y;
 	}
 	
 	while( y >= i ){
 		potencia = produto(potencia, x);
-		i = i + 1;
+		i = i + y;
 	}
 	
 	return potencia;
 }
 
-console.log(potencia(2,4));
+var a = 2;
+var b = 3;
+console.log(potencia(a,b));
