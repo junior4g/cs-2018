@@ -1,6 +1,6 @@
 const operacao = require("../codigo");
 
-QUnit.test("Raiz quadrada", function (assert) {
+QUnit.test("Numero Primo", function (assert) {
 
   // Executa a operação que desejamos testar
   let resultado = operacao.numeroPrimo(5);
@@ -9,7 +9,7 @@ QUnit.test("Raiz quadrada", function (assert) {
   assert.equal(resultado, "verdadeiro", "Correto!");
 });
 
-QUnit.test("Raiz quadrada", function (assert) {
+QUnit.test("Numero Primo", function (assert) {
 
   // Executa a operação que desejamos testar
   let resultado = operacao.numeroPrimo(19);
@@ -18,7 +18,7 @@ QUnit.test("Raiz quadrada", function (assert) {
   assert.equal(resultado, "verdadeiro", "Correto!");
 });
 
-QUnit.test("Raiz quadrada", function (assert) {
+QUnit.test("Numero Primo", function (assert) {
 
   // Executa a operação que desejamos testar
   let resultado = operacao.numeroPrimo(588);

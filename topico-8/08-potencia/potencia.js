@@ -13,43 +13,42 @@
  * @param {number} s - Representa o resultado da função produto
  */
 
-var x = 0;
-var y = 1;
+ var num1 = 0;
+ var num2 = 1;
+ var num3 = -1;
  
-function produto(a, b) {
-	if(( a >= x ) && ( b >= x )){
-		totalParcelas = a;
-		parcela = b;
-	}
-	if( b < a ){
-		totalParcelas = b;
-		parcela = a;
-	}
-	i = y;
-	s = x;
-	
-	while( totalParcelas >= i ){
-		s = s + parcela;
-		i = i + y;
-	}
-	
-	return s;
-}
- 
-function potencia(x, y) {
-	if(( x >= x ) && ( y >= x )){
-		potencia = y;
-		i = y;
-	}
-	
-	while( y >= i ){
-		potencia = produto(potencia, x);
-		i = i + y;
-	}
-	
-	return potencia;
+function produto(a,b){
+    if(a < num1 || b < num1){
+        return num2;
+    }
+    var totalParcelas = a;
+    var parcela = b;
+    if(b < a){
+        totalParcelas = b;
+        parcela = a;
+    }
+    var i = num2;
+    var s = num1;
+    while(i <= totalParcelas){
+        s += parcela;
+        i++;
+    }
+    return s;
 }
 
-var a = 2;
-var b = 3;
-console.log(potencia(a,b));
+function potencia(x,y){
+    if(x < num1 || y < num1){
+        return num3;
+    }
+    var potencia = num2;
+    var i = num2;
+    while(i <= y){
+        potencia = produto(potencia, x);
+        i++;
+    }
+    return potencia;
+}
+
+var x = 2;
+var y = 4;
+console.log(potencia(x,y));

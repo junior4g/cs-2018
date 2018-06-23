@@ -7,27 +7,36 @@
  * @param {number} t - Representa uma variavel auxiliar
  * @param {number} c - Representa o n-esimo numero de fibonacci
  * @param {number} a - Representa uma variavel auxiliar
+ * @param {number} x - Representa uma variavel auxiliar
+ * @param {number} y - Representa uma variavel auxiliar
+ * @param {number} z - Representa uma variavel auxiliar
+ * @param {number} num - Representa um valor repassado ao programa
  */
  
+var x = 0;
+var y = 1;
+var z = 2;
+ 
 function fibonacci(n) {
-	if( n >= 0 ){
-		a = 0;
-		c = 1;
+	if( n >= x ){
+		a = x;
+		c = y;
 	}
 	
-	if( (n == 0) || (n == 1) )
+	if( (n == x) || (n == y) )
 		return n;
 	
-	i = 2;
+	i = z;
 	
 	while( n >= i ){
 		t = c;
 		c = c + a;
 		a = t;
-		i = i + 1;
+		i = i + z;
 	}
 	
 	return c;
 }
 
-console.log(fibonacci(35));
+var num = 35;
+console.log(fibonacci(num));

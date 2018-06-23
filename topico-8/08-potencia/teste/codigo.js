@@ -13,36 +13,40 @@
  * @param {number} s - Representa o resultado da função produto
  */
 
-function produto(a, b) {
-	if( a >= 0 ) && ( b >= 0 ){
-		totalParcelas = a;
-	}
-	if( b < a ){
-		totalParcelas = b;
-		parcela = a;
-	}
-	i = 1;
-	s = 0;
-	
-	while( totalParcelas >= i ){
-		s = s + parcela;
-		i = i + 1;
-	}
-	
-	return s;
-}
+ var num1 = 0;
+ var num2 = 1;
+ var num3 = -1;
  
-function potencia(x, y) {
-	if( x >= 0 ) && ( y >= 0 ){
-		potencia = 1;
-	}
-	
-	while( y >= i ){
-		potencia = produto(potencia, x);
-		i = i + 1;
-	}
-	
-	return potencia;
+function produto(a,b){
+    if(a < num1 || b < num1){
+        return num2;
+    }
+    var totalParcelas = a;
+    var parcela = b;
+    if(b < a){
+        totalParcelas = b;
+        parcela = a;
+    }
+    var i = num2;
+    var s = num1;
+    while(i <= totalParcelas){
+        s += parcela;
+        i++;
+    }
+    return s;
+}
+
+function potencia(x,y){
+    if(x < num1 || y < num1){
+        return num3;
+    }
+    var potencia = num2;
+    var i = num2;
+    while(i <= y){
+        potencia = produto(potencia, x);
+        i++;
+    }
+    return potencia;
 }
 
 exports.potencia = potencia;

@@ -1,6 +1,6 @@
 const operacao = require("../codigo");
 
-QUnit.test("Valor de PI", function (assert) {
+QUnit.test("Razao", function (assert) {
 
   // Executa a operação que desejamos testar
   let resultado = operacao.razao(1,3,4);
@@ -9,7 +9,7 @@ QUnit.test("Valor de PI", function (assert) {
   assert.equal(resultado, 1.6363636363636365, "Correto!");
 });
 
-QUnit.test("Valor de PI", function (assert) {
+QUnit.test("Razao", function (assert) {
 
   // Executa a operação que desejamos testar
   let resultado = operacao.razao(1,4,2);
@@ -18,7 +18,7 @@ QUnit.test("Valor de PI", function (assert) {
   assert.equal(resultado, 1.8, "Correto!");
 });
 
-QUnit.test("Valor de PI", function (assert) {
+QUnit.test("Razao", function (assert) {
 
   // Executa a operação que desejamos testar
   let resultado = operacao.razao(1,8,3);
