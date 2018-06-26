@@ -9,14 +9,24 @@ const operacao = require("../codigo");
   assert.equal(resultado, 9.000011298790216, "Correto!");
 }); */
 
-QUnit.test("Raiz quadrada", function (assert) {
-
+QUnit.test("Validar CPF", function (assert) {
+  //var arr = [1, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0];
   // Executa a operação que desejamos testar
-  let resultado = operacao.cpf(arr = [0, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0]);
+  let resultado = operacao.cpf(9, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0 );
 
   // Verifica se o resultado produzido é o esperado.
   assert.equal(resultado, true, "Correto!");
 });
+
+QUnit.test("Validar CPF", function (assert) {
+  //var arr = [1, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0];
+  // Executa a operação que desejamos testar
+  let resultado = operacao.cpf( 0, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0 );
+
+  // Verifica se o resultado produzido é o esperado.
+  assert.equal(resultado, true, "Correto!");
+});
+
 
 
 

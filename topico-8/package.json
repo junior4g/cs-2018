@@ -1,0 +1,11 @@
+{
+  "name": "ufg-inf-cs-2018-1-topico08",
+  "version": "1.0.0",
+  "scripts": {
+    "teste": "qunit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "qunit": "^2.5.0"
+  }
+}

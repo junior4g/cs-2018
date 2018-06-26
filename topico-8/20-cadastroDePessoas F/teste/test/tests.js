@@ -9,7 +9,21 @@
  * @param {number} dk - Representa o resultado do calculo que será comparado com o digito 11 do cpf
  */
  
-function cpf() {
+function cpf(n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11) {
+	var arr = [ n2, n3, n4, n5, n6, n7, n8, n9, n10, n11];
+	/*arguments[0] = n1;
+	arguments[1] = n2;
+	arguments[2] = n3;
+	arguments[3] = n4;
+	arguments[4] = n5;
+	arguments[5] = n6;
+	arguments[6] = n7;
+	arguments[7] = n8;
+	arguments[8] = n9;
+	arguments[9] = n10;
+	arguments[10] = n11;*/
+	console.log(n1);
+	
 	var soma = 0;
 	for (var i = 0; i < arguments.length; i++) {
 		if( arguments[i] >= 0 )
@@ -40,14 +54,24 @@ const operacao = require("../codigo");
   assert.equal(resultado, 9.000011298790216, "Correto!");
 }); */
 
-QUnit.test("Raiz quadrada", function (assert) {
-
+QUnit.test("Validar CPF", function (assert) {
+  //var arr = [1, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0];
   // Executa a operação que desejamos testar
-  let resultado = operacao.cpf(arr = [0, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0]);
+  let resultado = operacao.cpf(9, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0 );
 
   // Verifica se o resultado produzido é o esperado.
   assert.equal(resultado, true, "Correto!");
 });
+
+QUnit.test("Validar CPF", function (assert) {
+  //var arr = [1, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0];
+  // Executa a operação que desejamos testar
+  let resultado = operacao.cpf( 0, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0 );
+
+  // Verifica se o resultado produzido é o esperado.
+  assert.equal(resultado, true, "Correto!");
+});
+
 
 
 

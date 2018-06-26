@@ -8,7 +8,21 @@
  * @param {number} dk - Representa o resultado do calculo que será comparado com o digito 11 do cpf
  */
  
-function cpf() {
+function cpf(n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11) {
+	var arr = [ n2, n3, n4, n5, n6, n7, n8, n9, n10, n11];
+	/*arguments[0] = n1;
+	arguments[1] = n2;
+	arguments[2] = n3;
+	arguments[3] = n4;
+	arguments[4] = n5;
+	arguments[5] = n6;
+	arguments[6] = n7;
+	arguments[7] = n8;
+	arguments[8] = n9;
+	arguments[9] = n10;
+	arguments[10] = n11;*/
+	console.log(n1);
+	
 	var soma = 0;
 	for (var i = 0; i < arguments.length; i++) {
 		if( arguments[i] >= 0 )
