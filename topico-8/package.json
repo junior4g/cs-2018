@@ -1,6 +1,6 @@
 {
   "name": "cs-2018-topico08",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "scripts": {
     "teste": "qunit"
   },
