@@ -7,6 +7,7 @@
  * @param {number} num1 - Representa um numero inteiro positivo
  * @param {number} num2 - Representa um numero inteiro positivo
  * @param {number} x - Representa uma variavel auxiliar
+ * @returns {number} - Retorna o resultado do calculo
  */
 
 var x = 0;

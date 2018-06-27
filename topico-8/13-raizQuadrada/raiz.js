@@ -5,6 +5,7 @@
  * @param {number} n - Representa um valor repassado ao programa
  * @param {number} i - Representa a precisão da raiz
  * @param {number} r - Representa a raiz quadrada
+ * @returns {number} - Retorna o resultado do calculo
  */
  
 var a = 0;

@@ -7,7 +7,8 @@
  * @param {number} y - Representa um numero fornecido ao programa
  * @param {number} z - Representa um numero fornecido ao programa
  * @param {number} w - Representa um numero fornecido ao programa
- * @param {number} r - Representa um numero fornecido ao programa 
+ * @param {number} r - Representa um numero fornecido ao programa
+ * @returns {number} - Retorna o resultado do calculo
  */
  
 var x = 0;

@@ -9,6 +9,7 @@
  * @param {number} num1 - Representa uma variavel auxiliar
  * @param {number} p - Representa uma variavel auxiliar
  * @param {number} i - Representa uma variavel auxiliar
+ * @returns {number} - Retorna o resultado do calculo
  */
  
 var num0 = 0;

@@ -11,6 +11,7 @@
  * @param {number} y - Representa uma variavel auxiliar
  * @param {number} z - Representa uma variavel auxiliar
  * @param {number} num - Representa um valor repassado ao programa
+ * @returns {number} - Retorna o resultado do calculo
  */
  
 var x = 0;

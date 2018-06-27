@@ -11,6 +11,7 @@
  * @param {number} totalParcelas - Recebe o menor numero fornecido ao programa
  * @param {number} i - Representa um contador interno
  * @param {number} s - Representa o resultado da função produto
+ * @returns {number} - Retorna o resultado do calculo
  */
 
  var num1 = 0;

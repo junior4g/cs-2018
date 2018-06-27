@@ -5,6 +5,7 @@
  * @param {number} n - Representa um valor repassado ao programa
  * @param {number} s - Representa uma variavel de controle
  * @param {number} i - Representa uma variavel de controle
+ * @returns {boolean} - Retorna o resultado do calculo
  */
  
 var a = 1;

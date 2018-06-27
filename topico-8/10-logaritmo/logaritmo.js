@@ -7,6 +7,7 @@
  * @param {number} numerador - Representa o numerador
  * @param {number} denominador - Representa o denominador
  * @param {number} i - Representa uma variavel de controle
+ * @returns {number} - Retorna o resultado do calculo
  */
 
  var x = 1;

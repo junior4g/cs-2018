@@ -7,6 +7,7 @@
  * @param {number} a - Representa uma variavel auxiliar
  * @param {number} b - Representa uma variavel auxiliar
  * @param {number} c - Representa uma variavel auxiliar
+ * @returns {char} - Retorna o resultado do calculo
  */
  
 var a = 0;

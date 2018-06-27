@@ -6,6 +6,7 @@
  * @param {number} y - Representa um valor repassado ao programa
  * @param {number} k - Representa um valor repassado ao programa
  * @param {number} i - Representa uma variavel de controle
+ * @returns {number} - Retorna o resultado do calculo
  */
  
 var a = 0;

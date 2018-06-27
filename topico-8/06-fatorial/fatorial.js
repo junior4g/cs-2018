@@ -8,6 +8,7 @@
  * @param {number} num - Representa um numero fornecido ao programa
  * @param {number} x - Representa uma variavel auxiliar
  * @param {number} y - Representa uma variavel auxiliar
+ * @returns {number} - Retorna o resultado do calculo
  */
 var x = 1;
 var y = 2;
