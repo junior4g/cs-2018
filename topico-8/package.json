@@ -1,11 +1,15 @@
 {
-  "name": "ufg-inf-cs-2018-1-topico08",
-  "version": "1.0.0",
+  "name": "cs-2018-topico08",
+  "version": "1.0.1",
   "scripts": {
     "teste": "qunit"
   },
   "dependencies": {},
   "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
     "qunit": "^2.5.0"
   }
 }

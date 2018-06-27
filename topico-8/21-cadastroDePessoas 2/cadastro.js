@@ -1,6 +1,6 @@
 /**
  * Representa o calculo para encontrar o resto de uma divisão inteira.
- * Serão informados dois numeros.
+ * Serão informados dois numeros
  * @constructor
  * @param {number} arr - Representa um array com o numero de cpf
  * @param {number} soma - Representa uma variavel auxiliar que verificar se o array contem 11 valores validos.
