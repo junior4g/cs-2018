@@ -1,4 +1,4 @@
-# cs-2018
+# Tópico 8 (junho/2018): 06, 13, 20 e 27 (quatro últimos encontros)
 Universidade Federal de Goiás - UFG
 
 Disciplina de Construção de Software 2018/1
