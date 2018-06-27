@@ -6,36 +6,37 @@
  * @param {number} soma - Representa uma variavel auxiliar que verificar se o array contem 11 valores validos.
  * @param {number} dj - Representa o resultado do calculo que será comparado com o digito 10 do cpf
  * @param {number} dk - Representa o resultado do calculo que será comparado com o digito 11 do cpf
+ * @param {number} num0 - Representa uma variavel auxiliar
+ * @param {number} num1 - Representa uma variavel auxiliar
+ * @param {number} num2 - Representa uma variavel auxiliar
+ * @param {number} num3 - Representa uma variavel auxiliar
+ * @param {number} num4 - Representa uma variavel auxiliar
+ * @param {number} num5 - Representa uma variavel auxiliar
+ * @param {number} num6 - Representa uma variavel auxiliar
+ * @param {number} num7 - Representa uma variavel auxiliar
+ * @param {number} num8 - Representa uma variavel auxiliar
+ * @param {number} num9 - Representa uma variavel auxiliar
+ * @param {number} num10 - Representa uma variavel auxiliar
+ * @param {number} num11 - Representa uma variavel auxiliar
  */
- 
-function cpf(n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11) {
-	var arr = [ n2, n3, n4, n5, n6, n7, n8, n9, n10, n11];
-	/*arguments[0] = n1;
-	arguments[1] = n2;
-	arguments[2] = n3;
-	arguments[3] = n4;
-	arguments[4] = n5;
-	arguments[5] = n6;
-	arguments[6] = n7;
-	arguments[7] = n8;
-	arguments[8] = n9;
-	arguments[9] = n10;
-	arguments[10] = n11;*/
-	console.log(n1);
-	
-	var soma = 0;
-	for (var i = 0; i < arguments.length; i++) {
-		if( arguments[i] >= 0 )
+
+var num0 = 0, num1 = 1, num2 = 2, num3 = 3, num4 = 4, num5 = 5, num6 = 6, num7 = 7, num8 = 8, num9 = 9, num10 = 10, num11 = 11; 
+
+function cpf() {
+	var soma = num0;
+	for (var i = num0; i < arguments.length; i++) {
+		if( arguments[i] >= num0 )
 			soma++;
 	}
-	if( soma == 11 ){
-		j = arguments[1] + (2*arguments[2]) + (3*arguments[3]) + (4*arguments[4]) + (5*arguments[5]) + (6*arguments[6]) + (7*arguments[7]) + (8*arguments[8]) + (9*arguments[9]);
-		k = arguments[2] + (2*arguments[3]) + (3*arguments[4]) + (4*arguments[5]) + (5*arguments[6]) + (6*arguments[7]) + (7*arguments[8]) + (8*arguments[9]) + (9*arguments[10]);
+	if( soma == num11 ){
+		j = arguments[num1] + (num2*arguments[num2]) + (num3*arguments[num3]) + (num4*arguments[num4]) + (num5*arguments[num5]) + (num6*arguments[num6]) + (num7*arguments[num7]) + (num8*arguments[num8]) + (num9*arguments[num9]);
 		
-		dj = ( ( j % 11 ) % 10 );
-		dk = ( ( k % 11 ) % 10 );
+		k = arguments[num2] + (num2*arguments[num3]) + (num3*arguments[num4]) + (num4*arguments[num5]) + (num5*arguments[num6]) + (num6*arguments[num7]) + (num7*arguments[num8]) + (num8*arguments[num9]) + (num9*arguments[num10])
 		
-		return ( dj == arguments[10]) || ( dk == arguments[11]);
+		dj = ( ( j % num11 ) % num10 );
+		dk = ( ( k % num11 ) % num10 );
+		
+		return ( dj == arguments[num10]) || ( dk == arguments[num11]);
 	}
 	
 }

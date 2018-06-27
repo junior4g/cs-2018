@@ -1,30 +1,22 @@
 const operacao = require("../codigo");
 
-QUnit.test("Raiz quadrada", function (assert) {
-
+QUnit.test("Cadastro de pessoas", function (assert) {
+  var arr = [1, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0];
   // Executa a operação que desejamos testar
-  let resultado = operacao.quadrado(81,5);
+  let resultado = operacao.cpf.apply(null, arr);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 9.000011298790216, "Correto!");
+  assert.equal(resultado, true, "Correto!");
 });
 
-QUnit.test("Raiz quadrada", function (assert) {
-
+QUnit.test("Cadastro de pessoas", function (assert) {
+  var arr = [1, 5, 7, 3, 5, 1, 9, 6, 4, 2, 1];
   // Executa a operação que desejamos testar
-  let resultado = operacao.quadrado(9,5);
+  let resultado = operacao.cpf.apply(null, arr);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 3, "Correto!");
+  assert.equal(resultado, true, "Correto!");
 });
 
-QUnit.test("Raiz quadrada", function (assert) {
-
-  // Executa a operação que desejamos testar
-  let resultado = operacao.quadrado(4,5);
-
-  // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 2, "Correto!");
-});
 
 

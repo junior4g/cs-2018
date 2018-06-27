@@ -20,7 +20,7 @@
  * @param {number} num11 - Representa uma variavel auxiliar
  */
 
-var num0 = 1, num1 = 1, num2 = 2, num3 = 3, num4 = 4, num5 = 5, num6 = 6, num7 = 7, num8 = 8, num9 = 9, num10 = 10, num11 = 11; 
+var num0 = 0, num1 = 1, num2 = 2, num3 = 3, num4 = 4, num5 = 5, num6 = 6, num7 = 7, num8 = 8, num9 = 9, num10 = 10, num11 = 11; 
 
 function cpf() {
 	var soma = num0;
@@ -29,10 +29,8 @@ function cpf() {
 			soma++;
 	}
 	if( soma == num11 ){
-		//j = arguments[1] + (2*arguments[2]) + (3*arguments[3]) + (4*arguments[4]) + (5*arguments[5]) + (6*arguments[6]) + (7*arguments[7]) + (8*arguments[8]) + (9*arguments[9]);
 		j = arguments[num1] + (num2*arguments[num2]) + (num3*arguments[num3]) + (num4*arguments[num4]) + (num5*arguments[num5]) + (num6*arguments[num6]) + (num7*arguments[num7]) + (num8*arguments[num8]) + (num9*arguments[num9]);
 		
-		//k = arguments[2] + (2*arguments[3]) + (3*arguments[4]) + (4*arguments[5]) + (5*arguments[6]) + (6*arguments[7]) + (7*arguments[8]) + (8*arguments[9]) + (9*arguments[10]);
 		k = arguments[num2] + (num2*arguments[num3]) + (num3*arguments[num4]) + (num4*arguments[num5]) + (num5*arguments[num6]) + (num6*arguments[num7]) + (num7*arguments[num8]) + (num8*arguments[num9]) + (num9*arguments[num10])
 		
 		dj = ( ( j % num11 ) % num10 );

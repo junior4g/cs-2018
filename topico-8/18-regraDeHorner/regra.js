@@ -7,6 +7,8 @@
  * @param {number} a - Representa um valor repassado ao programa
  * @param {number} num0 - Representa uma variavel auxiliar
  * @param {number} num1 - Representa uma variavel auxiliar
+ * @param {number} p - Representa uma variavel auxiliar
+ * @param {number} i - Representa uma variavel auxiliar
  */
  
 var num0 = 0;

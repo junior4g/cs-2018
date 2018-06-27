@@ -3,54 +3,64 @@
  * Representa o calculo para encontrar o resto de uma divisão inteira.
  * Serão informados dois numeros.
  * @constructor
- * @param {number} n - Representa um valor repassado ao programa
- * @param {number} i - Representa a precisão da raiz
- * @param {number} r - Representa a raiz quadrada
+ * @param {number} arr - Representa um array com o numero de cpf
+ * @param {number} soma - Representa uma variavel auxiliar que verificar se o array contem 11 valores validos.
+ * @param {number} j - Representa o resultado do calculo que será comparado com o digito 10 do cpf
+ * @param {number} k - Representa o resultado do calculo que será comparado com o digito 11 do cpf
  */
+
+//var arr = [0, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0];
+//cpf.apply(null, arr); 
  
-function quadrado(n, i) {
-	if( n > 0 ){
-		r = 1;
+function cpf() {
+	var soma = 0;
+	for (var i = 0; i < arguments.length; i++) {
+		if( arguments[i] >= 0 )
+			soma++;
+	}
+	if( soma == 11 ){
+		c = 8;
+		p = arguments[9];
+		s = arguments[9];
+		
+		while( c >= 1 ){
+			p = p + arguments[c];
+			s = s + p;
+			c = c - 1;
+		}
+		
+		j = ( ( s % 11 ) % 10 );
+		k = ( ( (s-p+(9*arguments[10]) % 11 ) % 10 ) );
+		
+		return ( j == arguments[10]) || ( k == arguments[11]);
 	}
 	
-	while( i >= 0 ){
-		r = ( r + ( n / r ) ) / 2;
-		i = i - 1;
-	}
-	
-	return r;
 }
 
-exports.quadrado = quadrado;
+exports.cpf = cpf;
+
+
 },{}],2:[function(require,module,exports){
 const operacao = require("../codigo");
 
-QUnit.test("Raiz quadrada", function (assert) {
-
+QUnit.test("Cadastro de pessoas", function (assert) {
+  var arr = [1, 2, 3, 1, 2, 7, 7, 9, 1, 1, 0];
   // Executa a operação que desejamos testar
-  let resultado = operacao.quadrado(81,5);
+  let resultado = operacao.cpf.apply(null, arr);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 9.000011298790216, "Correto!");
+  assert.equal(resultado, true, "Correto!");
 });
 
-QUnit.test("Raiz quadrada", function (assert) {
-
+QUnit.test("Cadastro de pessoas", function (assert) {
+  var arr = [1, 5, 7, 3, 5, 1, 9, 6, 4, 2, 1];
   // Executa a operação que desejamos testar
-  let resultado = operacao.quadrado(9,5);
+  let resultado = operacao.cpf.apply(null, arr);
 
   // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 3, "Correto!");
+  assert.equal(resultado, true, "Correto!");
 });
 
-QUnit.test("Raiz quadrada", function (assert) {
-
-  // Executa a operação que desejamos testar
-  let resultado = operacao.quadrado(4,5);
-
-  // Verifica se o resultado produzido é o esperado.
-  assert.equal(resultado, 2, "Correto!");
-});
 
 
 
